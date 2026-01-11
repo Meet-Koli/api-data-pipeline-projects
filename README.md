@@ -55,4 +55,4 @@ Each project includes:
 ## 👤 Author
 
 **Meet Koli**  
- API & Data Pipeline Enthusiast  
+Python Developer | API & Data Pipelines
