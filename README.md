@@ -3,7 +3,7 @@
 This repository contains a collection of **API-based data ingestion and validation projects** built using Python.  
 Each project focuses on fetching structured data from external APIs, validating it, handling errors, and storing clean outputs for further use.
 
-The goal is to build **reliable, production-style data pipelines** that follow real-world engineering practices.
+The goal is to build **reliable, production-style API data pipelines** that follow real-world engineering practices.
 
 ---
 ## 🎯 Purpose
