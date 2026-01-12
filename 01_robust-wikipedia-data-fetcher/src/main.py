@@ -8,7 +8,6 @@
 
 import json
 from pathlib import Path
-
 from fetcher import fetch_article
 from model import WikiArticle
 from logger import logger
@@ -20,7 +19,7 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 OUTPUT_FILE = OUTPUT_DIR / "result.json"
 
 
-def run_pipeline(query: str) -> None:
+def run_pipeline(query: str) -> None: 
     """
     Runs the Wikipedia data pipeline:
     1. Fetches raw data from API
@@ -36,13 +35,14 @@ def run_pipeline(query: str) -> None:
         logger.warning("No data received from API. Exiting pipeline.")
         return
 
+    #Now we will validate and save the data
     try:
         article = WikiArticle(
             title=raw_data.get("title"),
             summary=raw_data.get("extract"),
             url=raw_data.get("content_urls", {})
-               .get("desktop", {})
-               .get("page"),
+               .get("desktop", {})    # Why .get(): Avoid KeyError if keys missing
+               .get("page"),  # it will
         )
 
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
