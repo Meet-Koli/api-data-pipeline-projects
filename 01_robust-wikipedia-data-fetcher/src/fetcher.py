@@ -48,7 +48,9 @@ def fetch_article(title: str) -> Dict[str, Any]:
         try:
             logger.info(f"Fetching article: {title} (Attempt {attempts})")
 
-            response = requests.get(url, timeout=TIMEOUT)
+            HEADERS = { "User-Agent": "WikiDataFetcher/1.0 (contact: meet@example.com)"}
+
+            response = requests.get(url,headers=HEADERS, timeout=TIMEOUT)
 
             if response.status_code == 200:
                 logger.info(f"Successfully fetched article: {title}")
