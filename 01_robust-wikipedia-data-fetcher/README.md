@@ -80,6 +80,16 @@ This project ensures:
 ---
 
 ## 📂 Project Structure
+01_robust-wikipedia-data-fetcher/<br/>
+├── src/<br/>
+│   ├── models.py<br/>
+│   ├── logger.py<br/>
+│   ├── fetcher.py<br/>
+│   └── main.py<br/>
+├── output/<br/>
+├── logs/<br/>
+└── README.md<br/>
+
 
 ---
 
